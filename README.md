@@ -3,6 +3,25 @@ Self-Driving Car Engineer Nanodegree Program
 
 ---
 
+## PID
+
+A PID controller is a control loop feed-back mechanism that allows for the control of an output signal given a transfer function.
+
+It is composed of 3 main controllers:
+
+* P - Proportional controller:
+  The proportional controller takes in the current error and multiplies it by a constant Kp. The idea is to penalize the system for having large errors. 
+  This will allow the controller to cause the output signal to reach a steady state value which is only 0 if the reference value is 0 (steady state error)
+
+* I - Intergator controller:
+  The integrator controller integrates the error and multplies it with some constant Ki. The idea is to penalize the system for continuously having error.
+  This will make the steady state value shrink to 0 since the controller will increase (linearly) if the error is constant.
+
+* D - Derivative controller:
+  The derivative control differentiates the error signal and multiplies it with some constant Kd. The idea is to penalize the system for having rapid changes in error.
+  This will smooth the output signal and reduce overshoot.
+
+
 ## Dependencies
 
 * cmake >= 3.5
